@@ -1,0 +1,153 @@
+@import url(../base.css);
+
+.carousel-container {
+  margin-bottom: 5rem;
+}
+
+.infinite-carousel {
+  /* margin: 100px auto;
+  width: 90%; */
+  border: 5px solid red;
+  display: flex;
+  overflow-x: auto;
+}
+
+.infinite-carousel:has(img) {
+  border: none;
+}
+
+.infinite-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.infinite-carousel-group {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  animation: spin 5s infinite linear;
+  padding-right: 1em;
+}
+
+.infinite-carousel-card {
+  flex: 0 0 5em;
+  height: 5em;
+  padding: 1em;
+  background: cornflowerblue;
+  font-size: 3rem;
+  border-radius: 0.2rem;
+  text-align: center;
+  align-content: center;
+}
+
+.infinite-carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding: 0;
+  border-radius: 10px;
+}
+
+.infinite-carousel-card:has(img),
+img.clickable-carousel-card {
+  padding: 0;
+  background: transparent;
+}
+
+@keyframes spin {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -100%;
+  }
+}
+
+.clickable-carousel {
+  width: 100%;
+  overflow-x: auto;
+  margin: 3em auto;
+  display: flex;
+  gap: 1em;
+  scroll-behavior: smooth;
+  anchor-name: --carousel;
+  scroll-snap-type: x mandatory;
+  scroll-marker-group: after;
+}
+
+.clickable-carousel::scroll-marker-group {
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+}
+
+.clickable-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.clickable-carousel::scroll-button(left),
+.clickable-carousel::scroll-button(right) {
+  border: none;
+  background-color: var(--brand-color);
+  font-family: Consolas;
+  font-size: 3rem;
+  color: white;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  padding-bottom: 0.1em;
+  cursor: pointer;
+  position: fixed;
+  position-anchor: --carousel;
+}
+
+.clickable-carousel::scroll-button(left):disabled,
+.clickable-carousel::scroll-button(right):disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.clickable-carousel::scroll-button(left) {
+  position-area: left center;
+  translate: 50%;
+  content: '←';
+  /* content: '\2190'; */
+}
+
+.clickable-carousel::scroll-button(right) {
+  position-area: right center;
+  translate: -50%;
+  content: '→';
+  /* content: '\2192'; */
+}
+
+.clickable-carousel-card {
+  scroll-snap-align: start;
+  flex: 0 0 calc(100% / 3 - 0.7em);
+  /* flex: 0 0 20em; */
+  height: 12em;
+  /* aspect-ratio: 5 / 3; */
+  background-color: var(--color-primary);
+  padding: 1em;
+  border-radius: 0.5em;
+  text-align: center;
+  align-content: center;
+}
+
+.clickable-carousel-card::scroll-marker {
+  content: '';
+  width: 1em;
+  height: 1em;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+
+.clickable-carousel-card::scroll-marker:target-current {
+  background-color: var(--brand-color);
+}
+
+@media (max-width: 500px) {
+  .clickable-carousel-card {
+    flex: 0 0 100%;
+  }
+}

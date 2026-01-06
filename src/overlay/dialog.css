@@ -1,0 +1,50 @@
+dialog::backdrop {
+  background-image: linear-gradient(45deg, magenta, rebeccapurple, dodgerblue, green);
+  opacity: 0.75;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: var(--font-size);
+}
+
+dialog {
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  height: auto;
+  padding: 20px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  font-size: var(--font-size);
+}
+
+dialog[open] {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+dialog button {
+  align-self: flex-end;
+  margin-top: 15px;
+}
+
+.dialog-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dialog-content p {
+  font-size: var(--font-size);
+  margin-bottom: 70px;
+}

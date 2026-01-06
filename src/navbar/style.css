@@ -1,0 +1,52 @@
+@import url(../base.css);
+
+.flex {
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 5rem;
+}
+
+.navbar-brand {
+  font-size: var(--font-title-size);
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.navbar-nav {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar-item {
+  text-decoration: none;
+  color: var(--color-text);
+  font-size: var(--font-size);
+  transition: color 0.3s;
+  cursor: pointer;
+}
+
+.navbar-items-disabled {
+  display: contents;
+}
+
+.navbar-items-disabled .navbar-item,
+.navbar-item.disabled {
+  color: #999 !important;
+  cursor: not-allowed;
+}
+
+.navbar-item:not(.disabled):hover {
+  color: #007bff;
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="../index.html">
+          <div class="arrow"></div>
+          <span>Voltar</span>
+        </a>
+        <h1>Carousel CSS</h1>
+      </header>
+      <main>
+        <div class="title" data-text="Infinite Carousel">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="infinite-carousel"></textarea>
+          </details>
+        </div>
+        <div class="carousel-container">
+          <div class="infinite-carousel" data-content="infinite-carousel">
+            <div class="infinite-carousel-group">
+              <div class="infinite-carousel-card">1</div>
+              <div class="infinite-carousel-card">2</div>
+              <div class="infinite-carousel-card">3</div>
+              <div class="infinite-carousel-card">4</div>
+              <div class="infinite-carousel-card">5</div>
+              <div class="infinite-carousel-card">6</div>
+            </div>
+            <div aria-hidden class="infinite-carousel-group">
+              <div class="infinite-carousel-card">1</div>
+              <div class="infinite-carousel-card">2</div>
+              <div class="infinite-carousel-card">3</div>
+              <div class="infinite-carousel-card">4</div>
+              <div class="infinite-carousel-card">5</div>
+              <div class="infinite-carousel-card">6</div>
+            </div>
+          </div>
+          <br/>
+          <div class="infinite-carousel">
+            <div class="infinite-carousel-group">
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-1.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-2.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-3.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-4.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-5.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-6.jpeg" alt="img" />
+              </div>
+            </div>
+            <div aria-hidden class="infinite-carousel-group">
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-1.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-2.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-3.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-4.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-5.jpg" alt="img" />
+              </div>
+              <div class="infinite-carousel-card">
+                <img class="infinite-carousel-card" src="../../assets/img-6.jpeg" alt="img" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="title" data-text="Carousel Clickable">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="clickable-carousel"></textarea>
+          </details>
+        </div>
+        <div class="carousel-container">
+          <div class="clickable-carousel" data-content="clickable-carousel">           
+            <img class="clickable-carousel-card" src="../../assets/img-1.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-2.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-3.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-4.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-5.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-6.jpeg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-1.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-2.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-3.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-4.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-5.jpg" alt="img" />
+            <img class="clickable-carousel-card" src="../../assets/img-6.jpeg" alt="img" />
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../generate-markup.js"></script>
+</html>

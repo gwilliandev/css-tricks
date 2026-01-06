@@ -1,0 +1,49 @@
+@import url(../base.css);
+
+/* .content {
+  margin-bottom: 5rem;
+}
+
+.content.column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.content.row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 20px;
+} */
+
+ruby {
+  font-size: 2em;
+}
+
+ruby rt {
+  font-size: 0.5em;
+  color: #c00;
+}
+
+data:hover::after {
+  content: ' (ID ' attr(value) ')';
+  font-size: 0.7em;
+}
+
+p {
+  position: relative;
+}
+
+time {
+  font-weight: bold;
+}
+
+time:hover::before {
+  content: ' (' attr(datetime) ')';
+  font-size: 0.7em;
+  color: #666;
+  position: absolute;
+  top: -10px;
+}

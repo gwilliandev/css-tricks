@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="../index.html">
+          <div class="arrow"></div>
+          <span>Voltar</span>
+        </a>
+        <h1>Navbar CSS</h1>
+      </header>
+
+      <div class="title" data-text="Display: Contents">
+        <details>
+          <summary>Code</summary>
+          <textarea readonly id="nav-contents"></textarea>
+        </details>
+      </div>
+      <nav class="navbar" data-content="nav-contents">
+        <a class="navbar-brand" href="#">Brand</a>
+        <ul class="navbar-nav">
+          <li class="navbar-item">Home</li>
+          <li class="navbar-item">Features</li>
+          <li class="navbar-item">Pricing</li>
+          <div class="navbar-items-disabled">
+            <li class="navbar-item">Disabled</li>
+            <li class="navbar-item">Disabled</li>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="title" data-text="Repeated Display: Flex">
+        <details>
+          <summary>Code</summary>
+          <textarea readonly id="nav-flex"></textarea>
+        </details>
+      </div>
+      <nav class="navbar" data-content="nav-flex">
+        <a class="navbar-brand" href="#">Brand</a>
+        <ul class="navbar-nav">
+          <li class="navbar-item">Home</li>
+          <li class="navbar-item">Features</li>
+          <li class="navbar-item">Pricing</li>
+          <div class="flex">
+            <li class="navbar-item disabled">Disabled</li>
+            <li class="navbar-item disabled">Disabled</li>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="title" data-text="Display: Block">
+        <details>
+          <summary>Code</summary>
+          <textarea readonly id="nav-block"></textarea>
+        </details>
+      </div>
+      <nav class="navbar" data-content="nav-block">
+        <a class="navbar-brand" href="#">Brand</a>
+        <ul class="navbar-nav">
+          <li class="navbar-item">Home</li>
+          <li class="navbar-item">Features</li>
+          <li class="navbar-item">Pricing</li>
+          <div>
+            <li class="navbar-item disabled">Disabled</li>
+            <li class="navbar-item disabled">Disabled</li>
+          </div>
+        </ul>
+      </nav>
+    </div>
+  </body>
+  <script src="../generate-markup.js"></script>
+</html>

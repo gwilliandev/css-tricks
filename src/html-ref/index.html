@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Refs</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="../index.html">
+          <div class="arrow"></div>
+          <span>Voltar</span>
+        </a>
+        <h1>HTML Tricks</h1>
+      </header>
+      <main>
+        <div class="title" data-text="Time Element">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="time-element"></textarea>
+          </details>
+        </div>
+        <div class="content" data-content="time-element">
+          <p>The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde Park.</p>
+          <p>The concert starts at <time datetime="20:00">20:00</time> and you'll be able to enjoy the band for at least <time datetime="PT2H30M">2h 30m</time>.</p>
+        </div>
+
+        <div class="title" data-text="Ruby Element (Lang Description)">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="ruby-element"></textarea>
+          </details>
+        </div>
+        <div class="content row" data-content="ruby-element">
+          <ruby>
+            明日
+            <rp>(</rp><rt>Ashita</rt><rp>)</rp>
+          </ruby>
+          <ruby>
+            漢
+            <rp>(</rp><rt>kan</rt><rp>)</rp>
+            字
+            <rp>(</rp><rt>ji</rt><rp>)</rp>
+          </ruby>
+        </div>
+
+        <div class="title" data-text="Details Element (Disclosure Widget)">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="details-element"></textarea>
+          </details>
+        </div>
+        <div class="content" data-content="details-element">
+          <details>
+            <summary>Details</summary>
+            Something small enough to escape casual notice.
+          </details>
+        </div>
+
+        <div class="title" data-text="Data Element">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="data-element"></textarea>
+          </details>
+        </div>
+        <div class="content" data-content="data-element">
+          <p>New Products:</p>
+          <ul>
+            <li><data value="398">Mini Ketchup</data></li>
+            <li><data value="399">Jumbo Ketchup</data></li>
+            <li><data value="400">Mega Jumbo Ketchup</data></li>
+          </ul>
+        </div>
+
+        <div class="title" data-text="Progress Element">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="progress-element"></textarea>
+          </details>
+        </div>
+        <div class="content row" data-content="progress-element">
+          <label for="file">File progress:</label>
+          <progress id="file" max="100" value="70">70%</progress>
+        </div>
+
+        <div class="title" data-text="Hidden Property">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="hidden-property"></textarea>
+          </details>
+        </div>
+        <div class="content" data-content="hidden-property">
+          <p>The paragraph is important, so it is visible to everyone, however you will not be able to see the following link!</p>
+          <a href="#" hidden>Hidden link.</a>
+        </div>
+
+        <div class="title" data-text="Dir Property">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="dir-property"></textarea>
+          </details>
+        </div>
+        <div class="content" data-content="dir-property">
+          <p dir="rtl">This paragraph is in English but incorrectly goes right to left.</p>
+          <p dir="ltr">This paragraph is in English and correctly goes left to right.</p>
+          <hr />
+          <p>هذه الفقرة باللغة العربية ولكن بشكل خاطئ من اليسار إلى اليمين.</p>
+          <p dir="auto">هذه الفقرة باللغة العربية ، لذا يجب الانتقال من اليمين إلى اليسار.</p>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../generate-markup.js"></script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Overlay</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="../index.html">
+          <div class="arrow"></div>
+          <span>Voltar</span>
+        </a>
+        <h1>Overlay CSS</h1>
+      </header>
+      <main>
+        <div class="title" data-text="Tooltip">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="tooltip"></textarea>
+          </details>
+        </div>
+        <div class="content row">
+          <span data-tooltip="The tooltip is displayed at the top" data-flow="top" data-content="tooltip">CSS Tooltips</span>
+          <span data-tooltip="The tooltip is displayed at the right" data-flow="right">CSS Tooltips</span>
+          <span data-tooltip="The tooltip is displayed at the left" data-flow="left">CSS Tooltips</span>
+          <span data-tooltip="The tooltip is displayed at the bottom" data-flow="bottom">CSS Tooltips</span>
+        </div>
+
+        <div class="title" data-text="Dropdown">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="dropdown"></textarea>
+          </details>
+        </div>
+        <div class="content">
+          <button class="dropdown">Show Buttons</button>
+          <div id="dropdown-group" class="hidden">
+            <div data-content="dropdown">
+              <button popovertarget="menu-top-left" class="dropdown absolute-top-left">Menu Button</button>
+              <div id="menu-top-left" class="dropdown-menu" popover>
+                <a href="#">Item</a>
+                <a href="#">Longer Item</a>
+                <a href="#">Very Long Item Name</a>
+              </div>
+            </div>
+            <div>
+              <button popovertarget="menu-top-right" class="dropdown absolute-top-right">Menu Button</button>
+              <div id="menu-top-right" class="dropdown-menu" popover>
+                <a href="#">Item</a>
+                <a href="#">Longer Item</a>
+                <a href="#">Very Long Item Name</a>
+              </div>
+            </div>
+            <div>
+              <button popovertarget="menu-bottom-left" class="dropdown absolute-bottom-left">Menu Button</button>
+              <div id="menu-bottom-left" class="dropdown-menu" popover>
+                <a href="#">Item</a>
+                <a href="#">Longer Item</a>
+                <a href="#">Very Long Item Name</a>
+              </div>
+            </div>
+            <div>
+              <button popovertarget="menu-bottom-right" class="dropdown absolute-bottom-right">Menu Button</button>
+              <div id="menu-bottom-right" class="dropdown-menu" popover>
+                <a href="#">Item</a>
+                <a href="#">Longer Item</a>
+                <a href="#">Very Long Item Name</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="title" data-text="Modal/Dialog">
+          <details>
+            <summary>Code</summary>
+            <textarea readonly id="dialog"></textarea>
+          </details>
+        </div>
+        <div class="content row" data-content="dialog">
+          <button id="dialog-button" class="btn">Show the dialog</button>
+          <dialog closedby="any">
+            <button class="btn" autofocus>Close</button>
+            <div class="dialog-content">
+              <p>This modal dialog has a groovy backdrop!</p>
+            </div>
+          </dialog>
+        </div>
+      </main>
+    </div>
+  </body>
+  <script src="../generate-markup.js"></script>
+  <script>
+    const dialog = document.querySelector('dialog')
+    const showButton = document.querySelector('#dialog-button')
+    const closeButton = document.querySelector('dialog button')
+
+    // "Show the dialog" button opens the dialog modally
+    showButton.addEventListener('click', () => {
+      dialog.showModal()
+    })
+
+    // "Close" button closes the dialog
+    closeButton.addEventListener('click', () => {
+      dialog.close()
+    })
+
+    const dropdownButton = document.querySelector('.dropdown')
+    const dropdownGroup = document.getElementById('dropdown-group')
+
+    dropdownButton.addEventListener('click', () => {
+      dropdownGroup.classList.toggle('hidden')
+    })
+  </script>
+</html>

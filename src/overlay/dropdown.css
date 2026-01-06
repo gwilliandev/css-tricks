@@ -1,0 +1,103 @@
+.dropdown {
+  background-color: var(--brand-color);
+  padding: 0.7em 1.5em;
+  border: none;
+  border-radius: 0.3em;
+  font: inherit;
+  font-weight: 500;
+  color: white;
+  cursor: pointer;
+  /* anchor-name: --menu-button; */
+}
+
+.absolute-top-left {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  anchor-name: --menu-button-top-left;
+}
+
+#menu-top-left {
+  position-anchor: --menu-button-top-left;
+}
+
+.absolute-top-right {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  anchor-name: --menu-button-top-right;
+}
+
+#menu-top-right {
+  position-anchor: --menu-button-top-right;
+}
+
+.absolute-bottom-left {
+  position: absolute;
+  bottom: 1em;
+  left: 1em;
+  anchor-name: --menu-button-bottom-left;
+}
+
+#menu-bottom-left {
+  position-anchor: --menu-button-bottom-left;
+}
+
+.absolute-bottom-right {
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  anchor-name: --menu-button-bottom-right;
+}
+
+#menu-bottom-right {
+  position-anchor: --menu-button-bottom-right;
+}
+
+.dropdown-menu {
+  width: max-content;
+  border: 1px solid #ccc;
+  border-radius: 0.5em;
+  padding: 0.5em;
+  background: white;
+  position: absolute;
+  /* position-anchor: --menu-button; */
+  position-try-fallbacks: --below-right, --below-left, --up-right, --up-left;
+  top: anchor(bottom);
+  left: anchor(left);
+}
+
+.dropdown-menu:popover-open {
+  display: grid;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  padding: 0.7em 1.5em;
+  border-radius: 0.25em;
+  color: black;
+}
+
+@position-try --below-right {
+  inset: unset;
+  top: anchor(bottom);
+  left: anchor(left);
+}
+
+@position-try --below-left {
+  inset: unset;
+  top: anchor(bottom);
+  right: anchor(right);
+}
+
+@position-try --up-right {
+  inset: unset;
+  bottom: anchor(top);
+  left: anchor(left);
+}
+
+@position-try --up-left {
+  inset: unset;
+  bottom: anchor(top);
+  right: anchor(right);
+}
