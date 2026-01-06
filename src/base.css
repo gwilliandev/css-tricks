@@ -1,18 +1,46 @@
+@property --font-family {
+  syntax: '*';
+  inherits: false;
+  initial-value: Arial, sans-serif;
+}
+@property --line-height {
+  syntax: '<number>';
+  inherits: false;
+  initial-value: 1.5;
+}
+@property --color-code {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #e06c75;
+}
+@property --background-code {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #1e1e1e;
+}
+@property --color-background {
+  syntax: '<color>';
+  inherits: false;
+  initial-value: #f9f9f9;
+}
+@property --arrow-width {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 25px;
+}
+@property --arrow-height {
+  syntax: '<length>';
+  inherits: false;
+  initial-value: 4px;
+}
+
 :root {
-  --font-family: Arial, sans-serif;
   --font-size: 1rem;
   --font-title-size: 1.25rem;
-  --line-height: 1.5;
+
   --color-text: #333;
-  --color-code: #e06c75;
-  --background-code: #1e1e1e;
-  --color-background: #f9f9f9;
-  
   --color-primary: #1e1e1e;
   --brand-color: #007bff;
-
-  --arrow-width: 25px;
-  --arrow-height: 4px;
 }
 
 * {
@@ -96,22 +124,37 @@ body {
 .title {
   font-weight: bold;
   margin-bottom: 2rem;
+
+  &[data-text]::before {
+    content: attr(data-text);
+    margin: 0 -5px;
+    font-size: 1.5em;
+  }
+
+  & summary {
+    font-size: smaller;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 }
 
-.title[data-text]::before {
+/* .title[data-text]::before {
   content: attr(data-text);
   margin: 0 -5px;
   font-size: 1.5em;
-}
+} */
 
-.title summary {
+/* .title summary {
   font-size: smaller;
   cursor: pointer;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
 textarea {
   width: 100%;
